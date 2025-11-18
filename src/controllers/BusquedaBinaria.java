@@ -1,6 +1,6 @@
 package controllers;
 
-public class BusquedaBnaria {
+public class BusquedaBinaria {
     public Integer busquedaBinaria(int [] arr, int objetivo){
         int izq = 0;
         int der = arr.length - 1;
@@ -8,12 +8,12 @@ public class BusquedaBnaria {
         while(izq <= der){
             int medio = izq + (der - izq)/2;
             if(arr[medio] == objetivo){
-                return arr[medio];
+                return medio;
             }
             if(arr[medio] < objetivo){
                 izq = medio + 1;
             }else{
-                der = izq + 1;
+                der = medio - 1;
             }
         }
         return null;

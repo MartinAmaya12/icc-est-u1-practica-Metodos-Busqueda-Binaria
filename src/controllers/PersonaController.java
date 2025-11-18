@@ -28,7 +28,7 @@ public class PersonaController {
             int mid = izq + (der - izq) / 2;
             int comparison = people[mid].getNombre().compareTo(nombre);
 
-            if(comparison ==0){
+            if(comparison == 0){
                 return mid;
             }else if (comparison < 0) {
                 izq = mid+1;
