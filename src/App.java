@@ -12,35 +12,36 @@ public class App {
         BusquedaBinaria bb = new BusquedaBinaria();
 
         int[] arr = new int[]{10, 2, 4, 6, 7, 8, 13, 20};
-        bb.bubbleSort(arr); // Asegura que el arreglo esté ordenado
+        bb.bubbleSort(arr);
         int objetivo = 10;
         
         Integer result = bb.busquedaBinaria(arr, objetivo);
         
-        // Muestra el valor encontrado usando el índice devuelto por busquedaBinaria
         if (result != null) {
             sC.showResult("Elemento encontrado: " + arr[result]);
         } else {
-            sC.showResult((Integer) null); // Llama a la sobrecarga que maneja null
+            sC.showResult((Integer) null);
         }
         
         PersonaController pc = new PersonaController();
         Persona[] people = new Persona[]{
-            new Persona("Juan", 25),
-            new Persona("Ana", 30),
-            new Persona("Pedro", 28),
-            new Persona("Maria", 22),
-            new Persona("Luis", 22),
-            new Persona("Carmen", 27),
-            new Persona("Sofia", 24)
+            new Persona("Pablo", 4),
+            new Persona("Maria", 5),
+            new Persona("Juan", 18),
+            new Persona("David", 60),
+            new Persona("Mateo", 25),
+            new Persona("Diego", 12),
+            new Persona("Ana", 8),
+            new Persona("Alicia", 9),
+            new Persona("Jaime", 40)
         };
-        pc.bubbleSortbyname(people);
-
-        Integer result1 = pc.findPersonaByName(people, "Pedro");     
-        if (result1 != null) {
-            sC.showResult("Persona encontrada: " + people[result1].toString());
+        pc.bubbleSortByAge(people); 
+        int edadBuscada = 18; 
+        Integer index = pc.findPersonaByAge(people, edadBuscada);
+        if (index != null) {
+            sC.showResult("\nLa persona con la edad " + edadBuscada + " es " + people[index].getNombre());
         } else {
-            sC.showResult("No se encontró la persona");
+            sC.showResult("No se encontró ninguna persona con la edad " + edadBuscada);
         }
-    }
+    }   
 }
