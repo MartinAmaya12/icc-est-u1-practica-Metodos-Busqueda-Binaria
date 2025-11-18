@@ -37,9 +37,10 @@ public class App {
         };
         pc.bubbleSortByAge(people); 
         int edadBuscada = 18; 
-        Integer index = pc.findPersonaByAge(people, edadBuscada);
-        if (index != null) {
-            sC.showResult("\nLa persona con la edad " + edadBuscada + " es " + people[index].getNombre());
+        Persona personaEncontrada = pc.findPersonaByAge(people, edadBuscada);
+
+        if (personaEncontrada != null) {
+            sC.showResult("\nLa persona con la edad " + edadBuscada + " es " + personaEncontrada.getNombre());
         } else {
             sC.showResult("No se encontró ninguna persona con la edad " + edadBuscada);
         }
