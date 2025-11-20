@@ -1,18 +1,20 @@
-## Getting Started
+# Sistema de Personas (MVC)
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+***Martin Amaya*** 
 
-## Folder Structure
+Aplicación en Java para gestionar una lista de personas, implementando algoritmos de búsqueda y ordenamiento bajo el patrón **Modelo-Vista-Controlador**
 
-The workspace contains two folders by default, where:
+##  Características Principales
+* **Estructura MVC:** Separación lógica entre Modelo (`Person`), Vista (`View`) y Controlador (`Controller`).
+* **Algoritmos de Ordenamiento:**
+  * **Por Nombre:** Burbuja, Selección (Descendente) e Inserción.
+  * **Por Edad:** Inserción.
+* **Búsqueda Inteligente:** Búsqueda Binaria que detecta si la lista está desordenada y la ordena automáticamente antes de buscar.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+1. **Compilacion:**
+Part1
+   ![alt text](assets/Parte1.png)
+Part2
+   ![alt text](assets/Parte2.png)
+Part3   
+   ![alt text](assets/Parte3.png)
